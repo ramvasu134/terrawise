@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ═══ SEO META TAGS ═══ -->
+<title>TerraWise — Gen Z Tech, AI Culture & Nature Wisdom | by Ramakanth CH</title>
+<meta name="description" content="TerraWise is a Gen Z-rated blog covering AI culture, tech learning, digital cookbooks, nature exploration, and fast knowledge gain. Start learning smarter today.">
+<meta name="keywords" content="Gen Z AI blog, AI learning, tech culture, cookbook AI, learn fast, knowledge gain, nature tech, digital nomad, eco tech, AI tools 2026, machine learning beginners, TerraWise blog">
+<meta name="author" content="Ramakanth CH, ramakanth.ch@gmail.com">
+<meta name="robots" content="index, follow">
+<meta name="language" content="English">
+<meta name="revisit-after" content="3 days">
+<meta name="category" content="Technology, AI, Nature, Gen Z Culture">
+<link rel="canonical" href="https://ramakanth-ch.github.io/terrawise/">
+
+<!-- ═══ OPEN GRAPH (Facebook, WhatsApp, LinkedIn sharing) ═══ -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ramakanth-ch.github.io/terrawise/">
+<meta property="og:title" content="TerraWise — Gen Z AI, Tech & Nature Blog">
+<meta property="og:description" content="Discover AI tools, digital cookbooks, fast-learning techniques and nature-core tech culture. Rated #1 by Gen Z readers. Written by Ramakanth CH.">
+<meta property="og:image" content="https://ramakanth-ch.github.io/terrawise/og-image.jpg">
+<meta property="og:site_name" content="TerraWise Blog">
+<meta property="og:locale" content="en_US">
+
+<!-- ═══ TWITTER CARD ═══ -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="TerraWise — Gen Z AI & Nature Blog">
+<meta name="twitter:description" content="AI tools, digital cookbooks, fast learning & Gen Z tech culture. By Ramakanth CH.">
+<meta name="twitter:image" content="https://ramakanth-ch.github.io/terrawise/og-image.jpg">
+
+<!-- ═══ GOOGLE STRUCTURED DATA (JSON-LD) ═══ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "TerraWise",
+  "url": "https://ramakanth-ch.github.io/terrawise/",
+  "description": "Gen Z-rated blog on AI culture, tech learning, digital cookbooks, and nature exploration",
+  "author": {
+    "@type": "Person",
+    "name": "Ramakanth CH",
+    "email": "ramakanth.ch@gmail.com"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "Ramakanth CH"
+  },
+  "inLanguage": "en-US",
+  "keywords": ["AI learning", "cookbook", "Gen Z tech", "nature tech", "fast learning", "knowledge gain"],
+  "blogPost": [
+    {
+      "@type": "BlogPosting",
+      "headline": "Gen Z Is Rewilding Tech: AI as the New Compass for Nature Explorers",
+      "datePublished": "2026-03-14",
+      "author": {"@type": "Person", "name": "Ramakanth CH"},
+      "keywords": ["AI tools", "nature exploration", "Gen Z technology"]
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "5 AI Apps Gen Z Actually Uses to Save the Planet",
+      "datePublished": "2026-03-12",
+      "author": {"@type": "Person", "name": "Ramakanth CH"},
+      "keywords": ["AI apps", "eco tech", "climate action", "cookbook AI"]
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Learn Anything Fast: The Gen Z AI Learning Toolkit",
+      "datePublished": "2026-03-10",
+      "author": {"@type": "Person", "name": "Ramakanth CH"},
+      "keywords": ["learn fast", "AI learning", "knowledge gain", "Gen Z education"]
+    }
+  ]
+}
+</script>
+
+<!-- ═══ GOOGLE SITE VERIFICATION placeholder ═══ -->
+<!-- Replace with your actual code from Google Search Console -->
+<meta name="google-site-verification" content="REPLACE_WITH_YOUR_GOOGLE_VERIFICATION_CODE">
+
+<!-- ═══ FONTS ═══ -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500&family=Caveat:wght@600&display=swap" rel="stylesheet">
+
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --moss: #3B6D11;
+  --bark: #5C3A1E;
+  --clay: #A0522D;
+  --sage: #7A9E5F;
+  --cream: #F5F0E8;
+  --fog: #E8E2D4;
+  --stone: #8B7E6A;
+  --earth: #2C1A0E;
+  --leaf: #9DC461;
+  --sky: #B8D4C8;
+  --amber: #C8873A;
+  --mint: #D4EAD0;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--cream);
+  color: var(--earth);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* ── AUTHOR BAR ── */
+.author-bar {
+  background: var(--earth);
+  color: var(--fog);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 10px 40px;
+  font-size: 13px;
+}
+.author-bar .avatar-wrap {
+  width: 42px; height: 42px; border-radius: 50%;
+  background: var(--sage);
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 16px; font-weight: 700; color: #fff;
+  border: 2px solid var(--leaf);
+  flex-shrink: 0;
+}
+.author-bar .name { font-weight: 500; font-size: 14px; color: #fff; }
+.author-bar .gmail { color: var(--leaf); font-size: 12px; }
+.author-bar .badge {
+  margin-left: auto;
+  background: var(--moss);
+  color: var(--mint);
+  font-size: 11px;
+  padding: 4px 14px;
+  border-radius: 20px;
+  letter-spacing: 0.06em;
+}
+
+/* ── NAV ── */
+nav {
+  background: var(--cream);
+  border-bottom: 1px solid var(--fog);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 12px rgba(44,26,14,0.06);
+}
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px; font-weight: 900;
+  color: var(--moss); letter-spacing: -0.03em;
+  text-decoration: none;
+}
+.logo span { color: var(--clay); }
+.nav-links { display: flex; gap: 28px; list-style: none; }
+.nav-links a {
+  text-decoration: none; color: var(--stone);
+  font-size: 13px; font-weight: 500; letter-spacing: 0.04em;
+  transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--moss); }
+.nav-cta {
+  background: var(--moss); color: #fff;
+  border: none; padding: 9px 22px;
+  border-radius: 22px; font-size: 13px; font-weight: 500;
+  cursor: pointer; font-family: 'DM Sans', sans-serif;
+  transition: background 0.2s; text-decoration: none;
+  display: inline-block;
+}
+.nav-cta:hover { background: var(--bark); }
+.hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+.hamburger span { width: 24px; height: 2px; background: var(--earth); border-radius: 2px; transition: 0.3s; }
+
+/* ── HERO ── */
+.hero {
+  position: relative; width: 100%; height: 600px; overflow: hidden;
+}
+.hero-bg {
+  position: absolute; inset: 0;
+  background: linear-gradient(160deg, #0d2018 0%, #1e4a2e 30%, #3a7a50 60%, #7ab898 85%, #b8d4c8 100%);
+}
+.hero-bg svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.hero-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to bottom, rgba(13,32,24,0.15) 0%, transparent 40%, rgba(13,32,24,0.72) 100%);
+}
+.hero-content {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  padding: 56px 56px 48px;
+  animation: fadeUp 0.9s ease forwards;
+}
+.hero-tag {
+  display: inline-block;
+  background: var(--leaf); color: var(--earth);
+  font-size: 11px; font-weight: 600;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  padding: 5px 16px; border-radius: 20px; margin-bottom: 18px;
+}
+.hero-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 58px; font-weight: 900; line-height: 1.06;
+  color: #fff; max-width: 720px; margin-bottom: 20px;
+  letter-spacing: -0.025em;
+}
+.hero-title em { font-style: italic; color: var(--leaf); }
+.hero-meta {
+  display: flex; align-items: center; gap: 20px;
+  color: rgba(255,255,255,0.78); font-size: 13px; flex-wrap: wrap;
+}
+.hero-meta .dot { width: 3px; height: 3px; background: rgba(255,255,255,0.45); border-radius: 50%; }
+.hero-rating {
+  display: flex; align-items: center; gap: 6px;
+  background: rgba(255,255,255,0.14);
+  padding: 5px 14px; border-radius: 20px;
+  font-size: 12px; color: #fff; font-weight: 500;
+}
+.stars { color: #FFD166; letter-spacing: -2px; font-size: 14px; }
+
+/* ── TRENDING BAR ── */
+.trending-bar {
+  background: var(--moss); color: var(--mint);
+  display: flex; align-items: center; gap: 20px;
+  padding: 11px 40px; overflow: hidden; flex-wrap: wrap;
+}
+.trending-label {
+  font-weight: 600; letter-spacing: 0.1em;
+  text-transform: uppercase; font-size: 11px;
+  color: var(--leaf); white-space: nowrap;
+}
+.trending-tags { display: flex; gap: 8px; flex-wrap: wrap; }
+.t-tag {
+  background: rgba(255,255,255,0.1); padding: 3px 12px;
+  border-radius: 12px; font-size: 12px; cursor: pointer;
+  transition: background 0.2s; text-decoration: none; color: var(--mint);
+}
+.t-tag:hover { background: rgba(255,255,255,0.22); }
+
+/* ── LAYOUT ── */
+.main-wrap {
+  max-width: 1140px; margin: 0 auto; padding: 52px 40px;
+  display: grid; grid-template-columns: 1fr 340px; gap: 52px;
+}
+
+.section-label {
+  font-size: 11px; font-weight: 600; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--clay);
+  margin-bottom: 22px; display: flex; align-items: center; gap: 12px;
+}
+.section-label::after { content: ''; flex: 1; height: 1px; background: var(--fog); }
+
+/* ── FEATURED ── */
+.featured-card {
+  border-radius: 18px; overflow: hidden;
+  background: #fff; border: 1px solid var(--fog);
+  margin-bottom: 44px; transition: transform 0.3s, box-shadow 0.3s;
+}
+.featured-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(44,26,14,0.12); }
+
+.featured-img { height: 300px; position: relative; overflow: hidden; }
+.feat-bg {
+  width: 100%; height: 100%;
+  background: linear-gradient(140deg, #0d2a1a 0%, #2a6040 45%, #60a870 75%, #a0d0b0 100%);
+  position: relative;
+}
+.feat-bg svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.feat-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 50%, rgba(10,28,18,0.75) 100%); }
+.feat-cat {
+  position: absolute; top: 18px; left: 18px;
+  background: var(--amber); color: #fff;
+  font-size: 11px; font-weight: 600; letter-spacing: 0.1em;
+  padding: 5px 14px; border-radius: 12px; text-transform: uppercase;
+}
+.feat-genz {
+  position: absolute; top: 18px; right: 18px;
+  background: rgba(255,255,255,0.15);
+  color: #fff; font-size: 12px; font-weight: 600;
+  padding: 5px 14px; border-radius: 12px;
+}
+.featured-body { padding: 28px 32px; }
+.featured-body h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px; font-weight: 700; line-height: 1.22;
+  color: var(--earth); margin-bottom: 12px;
+}
+.featured-body p { font-size: 15px; color: var(--stone); line-height: 1.75; margin-bottom: 20px; }
+.read-btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--moss); color: #fff;
+  padding: 11px 24px; border-radius: 24px;
+  font-size: 13px; font-weight: 500; cursor: pointer;
+  border: none; font-family: 'DM Sans', sans-serif;
+  transition: background 0.2s; text-decoration: none;
+}
+.read-btn:hover { background: var(--bark); }
+
+/* ── POSTS GRID ── */
+.posts-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin-bottom: 44px; }
+.post-card {
+  border-radius: 16px; background: #fff;
+  border: 1px solid var(--fog); overflow: hidden;
+  transition: transform 0.25s, box-shadow 0.25s; cursor: pointer;
+  text-decoration: none; color: inherit; display: block;
+}
+.post-card:hover { transform: translateY(-5px); box-shadow: 0 14px 36px rgba(44,26,14,0.12); }
+.post-thumb { height: 140px; position: relative; overflow: hidden; }
+.thumb-1 { background: linear-gradient(135deg, #1a3a28 0%, #4a8c60 60%, #9dc461 100%); }
+.thumb-2 { background: linear-gradient(135deg, #2a1a0a 0%, #8b5e30 50%, #d4a06a 100%); }
+.thumb-3 { background: linear-gradient(135deg, #0d2b3e 0%, #2a6e8a 55%, #7abfd0 100%); }
+.thumb-4 { background: linear-gradient(135deg, #1e1a2e 0%, #5a4a8a 55%, #a08ac8 100%); }
+.post-thumb svg { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0.65; }
+.post-thumb-label {
+  position: absolute; bottom: 10px; left: 12px;
+  background: rgba(255,255,255,0.18);
+  color: #fff; font-size: 10px; font-weight: 600;
+  letter-spacing: 0.1em; padding: 3px 10px;
+  border-radius: 10px; text-transform: uppercase;
+}
+.post-body { padding: 18px 20px; }
+.post-body h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 16px; font-weight: 700; color: var(--earth);
+  line-height: 1.3; margin-bottom: 8px;
+}
+.post-body p { font-size: 13px; color: var(--stone); line-height: 1.65; margin-bottom: 12px; }
+.post-footer { display: flex; justify-content: space-between; align-items: center; }
+.post-date { font-size: 11px; color: var(--stone); }
+.post-rating { font-size: 12px; color: var(--amber); font-weight: 700; }
+
+/* ── QUOTE ── */
+.quote-block {
+  background: var(--moss); border-radius: 18px;
+  padding: 36px 40px; margin-bottom: 44px; position: relative; overflow: hidden;
+}
+.quote-block::before {
+  content: '\201C'; font-family: 'Playfair Display', serif;
+  font-size: 140px; color: rgba(255,255,255,0.07);
+  position: absolute; top: -30px; left: 24px; line-height: 1;
+}
+.quote-text {
+  font-family: 'Playfair Display', serif; font-size: 24px;
+  font-style: italic; color: #fff; line-height: 1.55;
+  margin-bottom: 18px; position: relative;
+}
+.quote-attr { font-size: 13px; color: var(--leaf); font-weight: 500; }
+
+/* ── FAST LEARN SECTION ── */
+.fast-learn {
+  background: #fff; border: 1px solid var(--fog);
+  border-radius: 18px; padding: 32px; margin-bottom: 44px;
+}
+.fast-learn h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px; font-weight: 700; color: var(--earth); margin-bottom: 8px;
+}
+.fast-learn .sub { font-size: 14px; color: var(--stone); margin-bottom: 24px; line-height: 1.6; }
+.learn-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.learn-card {
+  background: var(--cream); border-radius: 14px;
+  padding: 20px 18px; border: 1px solid var(--fog);
+  transition: transform 0.2s;
+}
+.learn-card:hover { transform: translateY(-3px); }
+.learn-icon {
+  width: 40px; height: 40px; border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 18px; margin-bottom: 12px;
+}
+.lc-green { background: var(--mint); }
+.lc-amber { background: #FEF3E2; }
+.lc-blue  { background: #E6F1FB; }
+.learn-card h4 { font-size: 14px; font-weight: 600; color: var(--earth); margin-bottom: 6px; }
+.learn-card p  { font-size: 12px; color: var(--stone); line-height: 1.6; }
+
+/* ── NEWSLETTER ── */
+.newsletter {
+  background: var(--fog); border-radius: 18px;
+  padding: 32px; text-align: center;
+}
+.newsletter h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px; font-weight: 700; color: var(--earth); margin-bottom: 8px;
+}
+.newsletter p { font-size: 14px; color: var(--stone); margin-bottom: 20px; line-height: 1.65; }
+.nl-input-row { display: flex; gap: 8px; max-width: 440px; margin: 0 auto; }
+.nl-input {
+  flex: 1; padding: 11px 16px; border: 1px solid var(--fog);
+  border-radius: 12px; font-size: 13px; font-family: 'DM Sans', sans-serif;
+  background: #fff; color: var(--earth); outline: none;
+}
+.nl-input:focus { border-color: var(--sage); }
+.nl-btn {
+  background: var(--moss); color: #fff; border: none;
+  padding: 11px 20px; border-radius: 12px; font-size: 13px;
+  font-weight: 500; cursor: pointer; font-family: 'DM Sans', sans-serif;
+  white-space: nowrap; transition: background 0.2s;
+}
+.nl-btn:hover { background: var(--bark); }
+
+/* ── SIDEBAR ── */
+.author-card {
+  background: #fff; border: 1px solid var(--fog);
+  border-radius: 18px; padding: 26px; text-align: center; margin-bottom: 26px;
+}
+.author-avatar-wrap {
+  width: 86px; height: 86px; border-radius: 50%;
+  background: var(--sage); margin: 0 auto 16px;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Playfair Display', serif; font-size: 28px;
+  font-weight: 700; color: #fff; border: 3px solid var(--leaf);
+  overflow: hidden;
+}
+.author-avatar-wrap img { width: 100%; height: 100%; object-fit: cover; }
+.author-card h3 {
+  font-family: 'Playfair Display', serif; font-size: 20px;
+  font-weight: 700; color: var(--earth); margin-bottom: 4px;
+}
+.author-title { font-size: 12px; color: var(--clay); font-weight: 600; letter-spacing: 0.07em; margin-bottom: 10px; }
+.author-gmail {
+  font-size: 12px; color: var(--moss); background: var(--mint);
+  padding: 5px 14px; border-radius: 12px; display: inline-block; margin-bottom: 14px;
+}
+.author-bio { font-size: 13px; color: var(--stone); line-height: 1.65; }
+.stat-row {
+  display: flex; justify-content: space-between;
+  margin-top: 18px; border-top: 1px solid var(--fog); padding-top: 16px;
+}
+.stat-item { text-align: center; }
+.stat-item .num { font-size: 20px; font-weight: 700; color: var(--moss); font-family: 'Playfair Display', serif; }
+.stat-item .lbl { font-size: 11px; color: var(--stone); letter-spacing: 0.06em; }
+
+.genz-wrap {
+  background: #fff; border: 1px solid var(--fog);
+  border-radius: 16px; padding: 22px; margin-bottom: 26px;
+}
+.genz-wrap h4 {
+  font-family: 'Playfair Display', serif; font-size: 16px;
+  font-weight: 700; color: var(--earth); margin-bottom: 18px;
+}
+.meter-item { margin-bottom: 14px; }
+.meter-label { display: flex; justify-content: space-between; font-size: 12px; color: var(--stone); margin-bottom: 5px; }
+.meter-bar { height: 6px; background: var(--fog); border-radius: 3px; overflow: hidden; }
+.meter-fill { height: 100%; border-radius: 3px; }
+
+.topic-list { list-style: none; }
+.topic-list li {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 12px 0; border-bottom: 1px solid var(--fog);
+  cursor: pointer; transition: color 0.2s;
+}
+.topic-list li:last-child { border-bottom: none; }
+.topic-list li:hover .topic-name { color: var(--moss); }
+.topic-name { font-size: 13px; font-weight: 500; color: var(--earth); display: flex; align-items: center; gap: 9px; }
+.topic-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+.topic-count { font-size: 11px; color: var(--stone); background: var(--fog); padding: 2px 8px; border-radius: 10px; }
+
+/* ── FOOTER ── */
+footer {
+  background: var(--earth); color: var(--fog);
+  padding: 40px; text-align: center;
+}
+.footer-logo {
+  font-family: 'Playfair Display', serif; font-size: 28px;
+  font-weight: 900; color: var(--leaf); margin-bottom: 10px;
+}
+.footer-logo span { color: var(--amber); }
+.footer-links { display: flex; justify-content: center; gap: 28px; margin: 14px 0; flex-wrap: wrap; }
+.footer-links a { color: var(--stone); text-decoration: none; font-size: 13px; transition: color 0.2s; }
+.footer-links a:hover { color: var(--leaf); }
+footer p { color: var(--stone); font-size: 12px; margin-top: 10px; }
+
+/* ── ANIMATIONS ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.hero-content { animation: fadeUp 0.9s ease forwards; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .main-wrap { grid-template-columns: 1fr; }
+  .hero-title { font-size: 38px; }
+  .hero-content { padding: 32px 28px 36px; }
+  .posts-grid { grid-template-columns: 1fr; }
+  .learn-grid { grid-template-columns: 1fr 1fr; }
+  nav { padding: 14px 20px; }
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+  .main-wrap { padding: 32px 20px; }
+  .trending-bar { padding: 11px 20px; }
+  .author-bar { padding: 10px 20px; }
+}
+@media (max-width: 600px) {
+  .hero { height: 520px; }
+  .hero-title { font-size: 30px; }
+  .learn-grid { grid-template-columns: 1fr; }
+  .nl-input-row { flex-direction: column; }
+  footer { padding: 28px 20px; }
+}
+</style>
+</head>
+<body>
+
+<!-- AUTHOR BAR -->
+<div class="author-bar">
+  <div class="avatar-wrap">RC</div>
+  <div>
+    <div class="name">Ramakanth CH</div>
+    <div class="gmail">ramakanth.ch@gmail.com</div>
+  </div>
+  <div class="badge">✦ Gen Z Voice · Tech &amp; AI</div>
+</div>
+
+<!-- NAV -->
+<nav>
+  <a class="logo" href="#">Terra<span>Wise</span></a>
+  <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#ai-tech">AI &amp; Tech</a></li>
+    <li><a href="#fast-learn">Learn Fast</a></li>
+    <li><a href="#cookbook">Cookbook AI</a></li>
+    <li><a href="#about">About</a></li>
+  </ul>
+  <a class="nav-cta" href="mailto:ramakanth.ch@gmail.com">Subscribe →</a>
+  <div class="hamburger" onclick="this.classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero" id="home">
+  <div class="hero-bg">
+    <svg viewBox="0 0 1400 600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="skyG" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#061810"/>
+          <stop offset="45%" stop-color="#143825"/>
+          <stop offset="100%" stop-color="#2e6e44"/>
+        </linearGradient>
+        <linearGradient id="snowG" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#e8f4ec"/>
+          <stop offset="100%" stop-color="#b8d4c8"/>
+        </linearGradient>
+        <linearGradient id="midG" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#236240"/>
+          <stop offset="100%" stop-color="#3a8c55"/>
+        </linearGradient>
+        <linearGradient id="fgG" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#122818"/>
+          <stop offset="100%" stop-color="#081408"/>
+        </linearGradient>
+        <linearGradient id="mistG" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#a8c8b8" stop-opacity="0"/>
+          <stop offset="60%" stop-color="#c8e0d0" stop-opacity="0.38"/>
+          <stop offset="100%" stop-color="#e0eeea" stop-opacity="0.15"/>
+        </linearGradient>
+      </defs>
+      <rect width="1400" height="600" fill="url(#skyG)"/>
+      <!-- Stars -->
+      <circle cx="140" cy="55" r="1.4" fill="#fff" opacity="0.55"/>
+      <circle cx="380" cy="38" r="1" fill="#fff" opacity="0.45"/>
+      <circle cx="620" cy="50" r="1.5" fill="#fff" opacity="0.65"/>
+      <circle cx="860" cy="32" r="1" fill="#fff" opacity="0.5"/>
+      <circle cx="1100" cy="48" r="1.4" fill="#fff" opacity="0.55"/>
+      <circle cx="1340" cy="62" r="1" fill="#fff" opacity="0.4"/>
+      <circle cx="270" cy="78" r="0.9" fill="#fff" opacity="0.4"/>
+      <circle cx="740" cy="72" r="0.9" fill="#fff" opacity="0.4"/>
+      <!-- Far range -->
+      <polygon points="0,310 80,185 170,265 280,145 400,245 510,165 640,240 760,130 890,225 1010,150 1140,245 1270,155 1400,235 1400,420 0,420" fill="#3a6c4a" opacity="0.48"/>
+      <!-- Mid range -->
+      <polygon points="0,370 110,245 200,295 330,175 460,268 560,195 680,278 800,158 930,258 1050,180 1180,268 1300,185 1400,275 1400,500 0,500" fill="url(#midG)"/>
+      <!-- Snow caps -->
+      <polygon points="330,175 363,200 397,194 460,268 395,236 362,242 330,175" fill="url(#snowG)" opacity="0.88"/>
+      <polygon points="800,158 836,184 870,178 930,258 869,225 835,232 800,158" fill="url(#snowG)" opacity="0.92"/>
+      <polygon points="1050,180 1082,204 1115,198 1180,268 1114,236 1081,243 1050,180" fill="url(#snowG)" opacity="0.82"/>
+      <!-- Mist -->
+      <rect x="0" y="285" width="1400" height="170" fill="url(#mistG)"/>
+      <!-- Foreground -->
+      <polygon points="0,430 160,356 370,398 570,348 780,392 980,342 1190,378 1400,348 1400,600 0,600" fill="url(#fgG)"/>
+      <!-- Trees left -->
+      <g fill="#081408">
+        <polygon points="55,428 68,386 81,428"/>
+        <polygon points="72,422 86,376 100,422"/>
+        <polygon points="34,432 48,395 62,432"/>
+        <polygon points="102,426 115,388 128,426"/>
+        <polygon points="122,430 136,394 150,430"/>
+      </g>
+      <!-- Trees right -->
+      <g fill="#081408">
+        <polygon points="1265,422 1279,380 1293,422"/>
+        <polygon points="1286,426 1300,384 1314,426"/>
+        <polygon points="1306,428 1320,386 1334,428"/>
+        <polygon points="1325,424 1338,384 1351,424"/>
+        <polygon points="1348,430 1362,390 1376,430"/>
+      </g>
+      <!-- Moon -->
+      <circle cx="1130" cy="85" r="52" fill="#c8e8d0" opacity="0.12"/>
+      <circle cx="1130" cy="85" r="32" fill="#dff0e6" opacity="0.22"/>
+      <circle cx="1130" cy="85" r="16" fill="#f0f8f3" opacity="0.58"/>
+      <!-- River -->
+      <path d="M560,572 Q710,522 860,548 Q1010,528 1160,562" stroke="#60a878" stroke-width="3" fill="none" opacity="0.45"/>
+      <path d="M560,580 Q710,530 860,556 Q1010,536 1160,570" stroke="#80c898" stroke-width="1.5" fill="none" opacity="0.28"/>
+    </svg>
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-tag">⬡ Gen Z Rated · 2026 · AI &amp; Nature</div>
+    <h1 class="hero-title">Where <em>Wild AI</em> Meets the<br>Mountain Mind</h1>
+    <div class="hero-meta">
+      <span>By Ramakanth CH</span>
+      <span class="dot"></span>
+      <span>March 14, 2026</span>
+      <span class="dot"></span>
+      <span>Tech · AI · Cookbook · Fast Learning</span>
+      <div class="hero-rating">
+        <span class="stars">★★★★★</span>
+        <span>4.9 Gen Z Rating</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TRENDING BAR -->
+<div class="trending-bar">
+  <span class="trending-label">Trending</span>
+  <div class="trending-tags">
+    <a class="t-tag" href="#ai-tech">#AIinNature</a>
+    <a class="t-tag" href="#fast-learn">#LearnFast</a>
+    <a class="t-tag" href="#cookbook">#CookbookAI</a>
+    <a class="t-tag" href="#ai-tech">#GenZTech</a>
+    <a class="t-tag" href="#ai-tech">#EcoAI</a>
+    <a class="t-tag" href="#fast-learn">#KnowledgeGain</a>
+    <a class="t-tag" href="#ai-tech">#MountainCore</a>
+    <a class="t-tag" href="#fast-learn">#DigitalNomad</a>
+  </div>
+</div>
+
+<!-- MAIN -->
+<div class="main-wrap">
+  <main>
+
+    <!-- Featured -->
+    <div class="section-label" id="ai-tech">Featured Story</div>
+    <div class="featured-card">
+      <div class="featured-img">
+        <div class="feat-bg">
+          <svg viewBox="0 0 900 300" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="ff1" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#061810"/>
+                <stop offset="100%" stop-color="#1e5032"/>
+              </linearGradient>
+            </defs>
+            <rect width="900" height="300" fill="url(#ff1)"/>
+            <polygon points="0,210 110,135 220,178 350,95 480,168 600,105 730,178 860,112 900,130 900,300 0,300" fill="#164228" opacity="0.7"/>
+            <polygon points="110,135 142,158 173,152 220,178 172,154 141,160 110,135" fill="#d0e8d8" opacity="0.82"/>
+            <polygon points="350,95 384,120 418,114 480,168 417,138 383,145 350,95" fill="#e0f0e8" opacity="0.9"/>
+            <polygon points="600,105 634,128 667,122 730,178 666,148 633,154 600,105" fill="#d8eae0" opacity="0.78"/>
+            <rect x="0" y="210" width="900" height="90" fill="#081408" opacity="0.55"/>
+            <!-- Circuit/AI overlay -->
+            <g stroke="#9dc461" stroke-width="1" opacity="0.35" fill="none">
+              <rect x="380" y="28" width="140" height="50" rx="6"/>
+              <line x1="450" y1="28" x2="450" y2="8"/>
+              <line x1="380" y1="53" x2="350" y2="53"/>
+              <line x1="520" y1="53" x2="550" y2="53"/>
+              <line x1="450" y1="78" x2="450" y2="98"/>
+              <circle cx="450" cy="53" r="14" fill="#9dc461" fill-opacity="0.18"/>
+              <circle cx="450" cy="53" r="5" fill="#9dc461" fill-opacity="0.55"/>
+              <circle cx="350" cy="53" r="4" fill="#9dc461" fill-opacity="0.4"/>
+              <circle cx="550" cy="53" r="4" fill="#9dc461" fill-opacity="0.4"/>
+            </g>
+          </svg>
+        </div>
+        <div class="feat-overlay"></div>
+        <div class="feat-cat">AI Culture</div>
+        <div class="feat-genz">★ 4.9 Gen Z Rated</div>
+      </div>
+      <div class="featured-body">
+        <h2>Gen Z Is Rewilding Tech: How AI Is Becoming the New Compass for Nature Explorers</h2>
+        <p>From AI trail-finders to real-time biodiversity scanners, a new generation of outdoor enthusiasts is proving that screens and summits aren't opposites — they're collaborators. Discover how Gen Z is blending cutting-edge AI tools with the ancient call of the wild, and why this movement is reshaping how we learn from nature.</p>
+        <a class="read-btn" href="mailto:ramakanth.ch@gmail.com?subject=TerraWise Blog Interest">Read Full Story →</a>
+      </div>
+    </div>
+
+    <!-- Quote -->
+    <div class="quote-block">
+      <p class="quote-text">Technology should feel like standing at a mountain peak — vast, humbling, and full of possibility. Gen Z gets this more than anyone.</p>
+      <div class="quote-attr">— TerraWise · ramakanth.ch@gmail.com · March 2026</div>
+    </div>
+
+    <!-- Fast Learn Section -->
+    <div class="section-label" id="fast-learn">Learn Fast · Gain Knowledge</div>
+    <div class="fast-learn">
+      <h2>The TerraWise Fast-Learning Toolkit</h2>
+      <p class="sub">Whether you're diving into AI, digital cookbooks, or outdoor tech — here are the top methods Gen Z uses to absorb knowledge at lightning speed in 2026.</p>
+      <div class="learn-grid">
+        <div class="learn-card">
+          <div class="learn-icon lc-green">🤖</div>
+          <h4>AI-Assisted Learning</h4>
+          <p>Use Claude, ChatGPT, and Gemini to summarize complex topics, quiz yourself, and build mental models 5x faster.</p>
+        </div>
+        <div class="learn-card">
+          <div class="learn-icon lc-amber">📖</div>
+          <h4>Digital Cookbook Method</h4>
+          <p>Structure your knowledge like a recipe — ingredients (concepts), steps (process), and output (result). Works for coding, cooking, and everything in between.</p>
+        </div>
+        <div class="learn-card">
+          <div class="learn-icon lc-blue">🏔️</div>
+          <h4>Nature-Paced Deep Dives</h4>
+          <p>Go offline in nature for 90 minutes with one focused topic. Gen Z's top hack for absorbing dense AI content without burnout.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Posts Grid -->
+    <div class="section-label" id="cookbook">Latest Gen Z Picks</div>
+    <div class="posts-grid">
+
+      <a class="post-card" href="#ai-tech">
+        <div class="post-thumb thumb-1">
+          <svg viewBox="0 0 340 140" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="0,90 65,48 135,70 215,32 285,62 340,42 340,140 0,140" fill="#0d2a18" opacity="0.6"/>
+            <polygon points="65,48 88,63 110,58 135,70 110,60 87,65 65,48" fill="#c8e0c8" opacity="0.75"/>
+            <polygon points="215,32 240,50 263,45 285,62 262,48 239,54 215,32" fill="#d8f0c8" opacity="0.8"/>
+          </svg>
+          <div class="post-thumb-label">Eco Tech</div>
+        </div>
+        <div class="post-body">
+          <h3>5 AI Apps Gen Z Actually Uses to Save the Planet</h3>
+          <p>Carbon-tracking to forest restoration — apps reshaping climate activism.</p>
+          <div class="post-footer">
+            <span class="post-date">Mar 12, 2026</span>
+            <span class="post-rating">★ 4.8</span>
+          </div>
+        </div>
+      </a>
+
+      <a class="post-card" href="#cookbook">
+        <div class="post-thumb thumb-2">
+          <svg viewBox="0 0 340 140" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="0,100 85,55 170,80 250,44 340,72 340,140 0,140" fill="#3a1a05" opacity="0.55"/>
+            <polygon points="85,55 108,70 130,65 170,80 129,67 107,72 85,55" fill="#e8c88a" opacity="0.68"/>
+          </svg>
+          <div class="post-thumb-label">Cookbook AI</div>
+        </div>
+        <div class="post-body">
+          <h3>AI Cookbooks: Learn Any Skill Like a Recipe in 2026</h3>
+          <p>The cookbook framework that Gen Z is using to master AI, coding, and beyond.</p>
+          <div class="post-footer">
+            <span class="post-date">Mar 10, 2026</span>
+            <span class="post-rating">★ 4.9</span>
+          </div>
+        </div>
+      </a>
+
+      <a class="post-card" href="#fast-learn">
+        <div class="post-thumb thumb-3">
+          <svg viewBox="0 0 340 140" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="0,92 72,50 156,74 238,40 316,68 340,54 340,140 0,140" fill="#0d2030" opacity="0.55"/>
+            <polygon points="72,50 95,65 116,60 156,74 115,62 94,67 72,50" fill="#b8d8e8" opacity="0.72"/>
+            <circle cx="280" cy="40" r="20" fill="#f5f0c0" opacity="0.22"/>
+            <circle cx="280" cy="40" r="11" fill="#f8f4d0" opacity="0.44"/>
+          </svg>
+          <div class="post-thumb-label">AI + Photography</div>
+        </div>
+        <div class="post-body">
+          <h3>AI Lenses: Gen Z Photographers Reimagining Wilderness</h3>
+          <p>Generative AI meets raw nature — stunning, controversial, and very Gen Z.</p>
+          <div class="post-footer">
+            <span class="post-date">Mar 8, 2026</span>
+            <span class="post-rating">★ 4.9</span>
+          </div>
+        </div>
+      </a>
+
+      <a class="post-card" href="#fast-learn">
+        <div class="post-thumb thumb-4">
+          <svg viewBox="0 0 340 140" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="0,95 95,55 178,76 258,45 340,72 340,140 0,140" fill="#1a1228" opacity="0.5"/>
+            <polygon points="95,55 120,70 142,65 178,76 141,66 119,71 95,55" fill="#c8b8e8" opacity="0.65"/>
+            <circle cx="228" cy="38" r="16" fill="#a080d0" opacity="0.2"/>
+            <circle cx="228" cy="38" r="8" fill="#c0a0e8" opacity="0.42"/>
+          </svg>
+          <div class="post-thumb-label">Mindfulness Tech</div>
+        </div>
+        <div class="post-body">
+          <h3>Offline but Online: The Mindful Tech Paradox of Gen Z Hikers</h3>
+          <p>Biofeedback wearables and AI meditation apps are hitting the trail.</p>
+          <div class="post-footer">
+            <span class="post-date">Mar 6, 2026</span>
+            <span class="post-rating">★ 4.6</span>
+          </div>
+        </div>
+      </a>
+
+    </div>
+
+    <!-- Newsletter -->
+    <div class="newsletter" id="about">
+      <h3>Stay Rooted. Stay Wired.</h3>
+      <p>Get the freshest Gen Z tech, AI, and cookbook stories delivered weekly.<br>No noise — only signal worth your time.</p>
+      <div class="nl-input-row">
+        <input class="nl-input" type="email" placeholder="your@email.com">
+        <button class="nl-btn" onclick="alert('Thanks! We\'ll be in touch at ramakanth.ch@gmail.com')">Subscribe →</button>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- SIDEBAR -->
+  <aside>
+    <div class="author-card">
+      <div class="author-avatar-wrap">RC</div>
+      <h3>Ramakanth CH</h3>
+      <div class="author-title">Tech · AI · Nature Writer</div>
+      <div class="author-gmail">ramakanth.ch@gmail.com</div>
+      <p class="author-bio">Exploring the intersection of Gen Z culture, artificial intelligence, and the untamed natural world — one peak and one pixel at a time.</p>
+      <div class="stat-row">
+        <div class="stat-item"><div class="num">142</div><div class="lbl">Posts</div></div>
+        <div class="stat-item"><div class="num">48K</div><div class="lbl">Readers</div></div>
+        <div class="stat-item"><div class="num">4.9</div><div class="lbl">Rating</div></div>
+      </div>
+    </div>
+
+    <div class="genz-wrap">
+      <h4>Gen Z Topic Ratings</h4>
+      <div class="meter-item">
+        <div class="meter-label"><span>AI &amp; Machine Learning</span><span style="color:var(--moss);font-weight:600">9.8</span></div>
+        <div class="meter-bar"><div class="meter-fill" style="width:98%;background:var(--moss)"></div></div>
+      </div>
+      <div class="meter-item">
+        <div class="meter-label"><span>Cookbook AI Method</span><span style="color:var(--sage);font-weight:600">9.5</span></div>
+        <div class="meter-bar"><div class="meter-fill" style="width:95%;background:var(--sage)"></div></div>
+      </div>
+      <div class="meter-item">
+        <div class="meter-label"><span>Eco-Tech</span><span style="color:var(--amber);font-weight:600">9.4</span></div>
+        <div class="meter-bar"><div class="meter-fill" style="width:94%;background:var(--amber)"></div></div>
+      </div>
+      <div class="meter-item">
+        <div class="meter-label"><span>Fast Learning</span><span style="color:var(--clay);font-weight:600">9.2</span></div>
+        <div class="meter-bar"><div class="meter-fill" style="width:92%;background:var(--clay)"></div></div>
+      </div>
+      <div class="meter-item">
+        <div class="meter-label"><span>Mindfulness Tech</span><span style="color:var(--stone);font-weight:600">8.7</span></div>
+        <div class="meter-bar"><div class="meter-fill" style="width:87%;background:var(--stone)"></div></div>
+      </div>
+    </div>
+
+    <div class="section-label">Hot Topics</div>
+    <ul class="topic-list">
+      <li><span class="topic-name"><span class="topic-dot" style="background:var(--moss)"></span>Agentic AI Tools</span><span class="topic-count">2.4k reads</span></li>
+      <li><span class="topic-name"><span class="topic-dot" style="background:var(--amber)"></span>AI Cookbook Learning</span><span class="topic-count">2.1k reads</span></li>
+      <li><span class="topic-name"><span class="topic-dot" style="background:var(--clay)"></span>Trail AI Navigation</span><span class="topic-count">1.8k reads</span></li>
+      <li><span class="topic-name"><span class="topic-dot" style="background:var(--sage)"></span>Fast Knowledge Gain</span><span class="topic-count">1.5k reads</span></li>
+      <li><span class="topic-name"><span class="topic-dot" style="background:#7ab5d0"></span>Off-Grid Computing</span><span class="topic-count">980 reads</span></li>
+    </ul>
+
+  </aside>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Terra<span>Wise</span></div>
+  <div class="footer-links">
+    <a href="#home">Home</a>
+    <a href="#ai-tech">AI &amp; Tech</a>
+    <a href="#fast-learn">Learn Fast</a>
+    <a href="#cookbook">Cookbook AI</a>
+    <a href="mailto:ramakanth.ch@gmail.com">Contact</a>
+  </div>
+  <p>Written with intention by <strong>ramakanth.ch@gmail.com</strong> · © 2026 TerraWise Blog · All rights reserved</p>
+  <p style="margin-top:8px;font-size:11px;color:#5a5040;">Powered by GitHub Pages · Indexed by Google Search</p>
+</footer>
+
+</body>
+</html>
