@@ -1,0 +1,17 @@
+{
+  // Cloudflare Workers configuration for TerraWise
+  "name": "terrawise",
+  "main": "src/worker.js",
+  "compatibility_date": "2025-09-27",
+  "compatibility_flags": ["nodejs_compat"],
+
+  // Serve the static site from the repo root
+  "assets": {
+    "directory": "."
+  },
+
+  // Workers AI binding — exposes env.AI in the worker
+  "ai": {
+    "binding": "AI"
+  }
+}

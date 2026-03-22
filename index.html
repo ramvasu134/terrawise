@@ -176,6 +176,33 @@ nav{background:rgba(253,250,244,0.96);border-bottom:1px solid var(--fog);
 .learn-card h4{font-size:14px;font-weight:600;color:var(--earth);margin-bottom:6px}
 .learn-card p{font-size:12px;color:var(--stone);line-height:1.65}
 
+/* ASK AI PANEL */
+.ask-ai{margin-top:28px;background:var(--mint);border-radius:16px;padding:24px}
+.ask-ai h4{font-size:15px;font-weight:700;color:var(--moss);margin-bottom:6px}
+.ask-ai .ai-desc{font-size:13px;color:var(--stone);margin-bottom:16px;line-height:1.6}
+.ai-input-wrap{position:relative}
+.ai-textarea{width:100%;min-height:96px;padding:12px 14px;border:1.5px solid #C0E0A0;
+  border-radius:12px;font-size:13px;font-family:'DM Sans',sans-serif;color:var(--earth);
+  background:#fff;resize:vertical;outline:none;line-height:1.65;box-sizing:border-box}
+.ai-textarea:focus{border-color:var(--sage)}
+.ai-char-count{font-size:11px;color:var(--stone);margin-top:4px;text-align:right}
+.ai-char-count.over{color:#c0392b;font-weight:700}
+.ai-row{display:flex;align-items:center;gap:10px;margin-top:10px;flex-wrap:wrap}
+.ai-submit{background:var(--moss);color:#fff;border:none;padding:10px 22px;
+  border-radius:12px;font-size:13px;font-weight:500;cursor:pointer;
+  font-family:'DM Sans',sans-serif;transition:background .2s}
+.ai-submit:hover:not(:disabled){background:var(--bark)}
+.ai-submit:disabled{opacity:.55;cursor:not-allowed}
+.ai-note{font-size:11px;color:var(--stone);line-height:1.5}
+.ai-response{margin-top:16px;background:#fff;border-radius:12px;padding:16px;
+  font-size:13px;color:var(--earth);line-height:1.75;white-space:pre-wrap;
+  border:1px solid var(--fog);display:none}
+.ai-response.visible{display:block}
+.ai-response .trunc-note{font-size:11px;color:var(--clay);margin-top:10px;
+  padding-top:8px;border-top:1px solid var(--fog)}
+.ai-spinner{display:none;font-size:12px;color:var(--stone)}
+.ai-spinner.visible{display:inline}
+
 /* NEWSLETTER */
 .newsletter{background:linear-gradient(135deg,var(--mint),#E8F8D0);border-radius:20px;
   padding:36px;text-align:center;border:1px solid #C0E0A0}
@@ -820,9 +847,23 @@ footer p{color:#78A050;font-size:12px;margin-top:10px}
       <p>Go offline in nature for 90 minutes with one focused topic. Gen Z's top hack for absorbing dense AI content without burnout.</p>
     </div>
   </div>
-</div>
 
-<!-- POSTS GRID -->
+  <!-- ASK AI PANEL -->
+  <div class="ask-ai">
+    <h4>🤖 Ask TerraWise AI</h4>
+    <p class="ai-desc">Paste any text or question below and get an instant AI-generated summary or answer. Keep it under 1500 characters for best results.</p>
+    <div class="ai-input-wrap">
+      <textarea id="ai-input" class="ai-textarea" placeholder="Paste your text or question here…" oninput="twAI.onInput()"></textarea>
+    </div>
+    <div id="ai-char-count" class="ai-char-count">0 / 1500</div>
+    <div class="ai-row">
+      <button id="ai-btn" class="ai-submit" onclick="twAI.submit()" disabled>Ask AI →</button>
+      <span id="ai-spinner" class="ai-spinner">⏳ Thinking…</span>
+      <span class="ai-note">Powered by Cloudflare Workers AI · Input capped at 1500 chars</span>
+    </div>
+    <div id="ai-response" class="ai-response" role="region" aria-live="polite"></div>
+  </div>
+</div>
 <div class="section-label" id="cookbook">Latest Gen Z Picks</div>
 <div class="posts-grid">
 
@@ -1074,6 +1115,77 @@ footer p{color:#78A050;font-size:12px;margin-top:10px}
   <p>Written with intention by <strong>ramakanth.ch@gmail.com</strong> · © 2026 TerraWise Blog · All rights reserved</p>
   <p style="margin-top:8px;font-size:11px;color:#78A050">Powered by GitHub Pages · Indexed by Google Search</p>
 </footer>
+<script>
+// TerraWise AI panel — client-side logic
+// Enforces the same 1500-char limit as the Worker to prevent
+// "Oops, your request is too large" from Cloudflare Workers AI.
+const twAI = (() => {
+  const MAX = 1500;
+  const AI_ENDPOINT = '/api/ask';
 
+  function el(id) { return document.getElementById(id); }
+
+  function onInput() {
+    const len = el('ai-input').value.length;
+    const counter = el('ai-char-count');
+    counter.textContent = len + ' / ' + MAX;
+    counter.className = 'ai-char-count' + (len > MAX ? ' over' : '');
+    el('ai-btn').disabled = len === 0;
+  }
+
+  async function submit() {
+    const raw = el('ai-input').value;
+    if (!raw.trim()) return;
+
+    el('ai-btn').disabled = true;
+    el('ai-spinner').className = 'ai-spinner visible';
+    const respBox = el('ai-response');
+    respBox.className = 'ai-response';
+    respBox.innerHTML = '';
+
+    try {
+      const res = await fetch(AI_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ prompt: raw })
+      });
+
+      if (!res.ok) {
+        const err = await res.json().catch(() => ({}));
+        throw new Error(err.error || ('HTTP ' + res.status));
+      }
+
+      const data = await res.json();
+      const text = typeof data.response === 'string'
+        ? data.response
+        : JSON.stringify(data.response, null, 2);
+
+      respBox.innerHTML = escapeHtml(text)
+        + (data.truncated
+          ? '<div class="trunc-note">⚠️ Your input was longer than '
+            + MAX + ' characters and was automatically trimmed to avoid a '
+            + '"request too large" error. Original length: '
+            + data.originalLength + ' chars.</div>'
+          : '');
+    } catch (err) {
+      respBox.innerHTML = '<strong>Error:</strong> ' + escapeHtml(err.message);
+    }
+
+    respBox.className = 'ai-response visible';
+    el('ai-spinner').className = 'ai-spinner';
+    el('ai-btn').disabled = false;
+  }
+
+  function escapeHtml(str) {
+    return str
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;');
+  }
+
+  return { onInput, submit };
+})();
+</script>
 </body>
 </html>
